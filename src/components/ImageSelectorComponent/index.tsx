@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { TouchableOpacity, Image, View, Text } from 'react-native';
-import PrimaryButton from '../Button/PrimaryButton';
+import { Image, View, Text } from 'react-native';
+import PrimaryButton from '../PrimaryButton';
 import { IImageSelectorComponentProps } from './types';
 
 const ImageSelectorComponent: FC<IImageSelectorComponentProps> = ({
@@ -27,7 +27,7 @@ const ImageSelectorComponent: FC<IImageSelectorComponentProps> = ({
       ) : (
         <Image
           source={{ uri: image }}
-          style={{ width: 400, height: 300, resizeMode: 'contain' }}
+          style={{ width: 500, height: 400, resizeMode: 'contain' }}
         />
       )}
     </View>

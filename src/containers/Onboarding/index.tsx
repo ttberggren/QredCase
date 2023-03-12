@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import tw from 'utils/tw';
-import PrimaryButton from 'components/Button/PrimaryButton';
+import PrimaryButton from 'components/PrimaryButton';
 import { useNavigation } from '@react-navigation/native';
 
 const Onboarding = () => {
@@ -19,7 +19,6 @@ const Onboarding = () => {
           label={'Start scanning!'}
           color={'primary'}
           type="filled"
-          textSize={16}
           size={'large'}
           bordered={true}
           onPress={() => {

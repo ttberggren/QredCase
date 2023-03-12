@@ -8,6 +8,5 @@ interface IDocumentDetailScreenItem {
 }
 
 export interface IDocumentDetailDataProps {
-  //   data: IDocumentDetailScreenItem;
   route: RouteProp<{ params: { data: IDocumentDetailScreenItem } }, 'params'>;
 }

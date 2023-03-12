@@ -3,14 +3,14 @@ import { View } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import ImageSelectorComponent from 'components/ImageSelectorComponent';
 import callGoogleVisionAsync from 'utils/GoogleCloudVision';
-import PrimaryButton from '../../components/Button/PrimaryButton';
-import { mockDataFunction } from '../../api';
+import PrimaryButton from 'components/PrimaryButton';
+import { mockDataFunction } from 'api';
 import { useNavigation } from '@react-navigation/native';
 
 const ImageSelector = () => {
   const navigation = useNavigation();
-  const [image, setImage] = useState(null);
-  const [text, setText] = useState(
+  const [image, setImage] = useState<string | null>(null);
+  const [text, setText] = useState<string>(
     'After you have selected an image, you can choose whether you want to continue with it or redo it',
   );
   const [data, setData] = useState<{
@@ -47,17 +47,17 @@ const ImageSelector = () => {
     async function fetchData() {
       const response = await mockDataFunction();
       setData(response);
-      console.log(data);
+      console.log(response);
     }
     fetchData();
   }, []);
 
   return (
-    <>
+    <View className="items-center flex-1 justify-evenly">
       <ImageSelectorComponent text={text} image={image} pickImage={pickImage} />
-      <View className="flex-row">
+      <View>
         {image && (
-          <>
+          <View className="flex-row ">
             <PrimaryButton
               label={'Looks good!'}
               type={'filled'}
@@ -80,10 +80,10 @@ const ImageSelector = () => {
                 setImage(null);
               }}
             />
-          </>
+          </View>
         )}
       </View>
-    </>
+    </View>
   );
 };
 export default ImageSelector;

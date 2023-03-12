@@ -1,4 +1,4 @@
-// Google Cloud Vision API URL + KEY
+// Google Cloud Vision API URL + KEY (deactivated)
 const API_URL = `https://vision.googleapis.com/v1/images:annotate?key=AIzaSyC1f_MDHiY8Aqh4uWmg1MInlxRVo269VRA}`;
 
 function generateBody(image: string) {

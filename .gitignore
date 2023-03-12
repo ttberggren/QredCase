@@ -26,8 +26,6 @@ web-build/
 /ios
 /android
 
-# Staylive
-secrets/env
 
 # Xcode
 #

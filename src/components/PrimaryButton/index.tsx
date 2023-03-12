@@ -11,7 +11,7 @@ const PrimaryButton: FC<IPrimaryButtonProps> = ({
   type = 'filled',
   color = 'primary',
   textToUpperCase = false,
-  textSize = 16,
+  textSize = 20,
 }) => {
   const width = Dimensions.get('window').width;
 

@@ -1,15 +1,15 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import PaymentCompleted from 'containers/PaymentCompleted';
 import tw from 'utils/tw';
-import ImageSelector from '../../containers/ImageSelector';
 
-const DocumentPickerScreen = () => {
+const PaymentCompletedScreen = () => {
   return (
     <SafeAreaView style={tw`flex flex-1 bg-documentBackground`}>
-      <ImageSelector />
+      <PaymentCompleted />
     </SafeAreaView>
   );
 };
 
-export default DocumentPickerScreen;
+export default PaymentCompletedScreen;

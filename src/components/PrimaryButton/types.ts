@@ -1,5 +1,5 @@
 export interface IPrimaryButtonProps {
-  label: string;
+  label: string | {};
   onPress: () => void;
   size: string;
   bordered: boolean;

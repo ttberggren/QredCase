@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { View, Text } from 'react-native';
 import { IDocumentDetailScreenItem } from './types';
-import PrimaryButton from 'components/Button/PrimaryButton';
+import PrimaryButton from 'components/PrimaryButton';
 import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -22,7 +22,6 @@ const DocumentDetail: FC<IDocumentDetailScreenItem> = ({ data }) => {
         <PrimaryButton
           label={'Next'}
           type={'filled'}
-          textSize={16}
           color={'primary'}
           size={'large'}
           bordered={true}
